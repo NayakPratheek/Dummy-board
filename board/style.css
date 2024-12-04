@@ -1,0 +1,74 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: black;
+    color: white;
+}
+
+.controls {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 15px;
+}
+
+.colors {
+    display: flex;
+    gap: 10px;
+}
+
+.colors button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: transparent;
+    border:1px solid white;
+}
+
+.colors button:hover {
+    transform: scale(1.1);
+}
+
+
+.reset {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.reset:hover {
+    background: rgba(200, 200, 200, 1);
+}
+
+
+.brush-size {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#size {
+    cursor: pointer;
+}
+
+#blackboard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    cursor: crosshair;
+    touch-action: none;
+    z-index: 1;
+}

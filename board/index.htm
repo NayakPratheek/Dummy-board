@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="controls">
+        <button class="reset" onclick="clearCanvas()">Reset</button>
+        <div class="colors">
+            <button style="background: white;" onclick="changeColor('white')"></button>
+            <button style="background: red;" onclick="changeColor('red')"></button>
+            <button style="background: purple;" onclick="changeColor('purple')"></button>
+            <button style="background: blue;" onclick="changeColor('blue')"></button>
+            <button style="background: cyan;" onclick="changeColor('cyan')"></button>
+            <button style="background: green;" onclick="changeColor('green')"></button>
+            <button style="background: yellow;" onclick="changeColor('yellow')"></button>
+            <button style="background: orange;" onclick="changeColor('orange')"></button>
+        </div>
+        <div class="brush-size">
+            <label for="size">Brush Size:</label>
+            <input type="range" id="size" min="1" max="20" value="5" oninput="changeSize(this.value)">
+        </div>
+    </div>
+    <canvas id="blackboard"></canvas>
+    <script src="index.js"></script>
+</body>
+</html>
